@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { Modal, Input, Button, Form, Image, Col } from "antd";
+import { Modal, Input, Button, Form } from "antd";
 import Box from "../../../assets/images/box.svg";
 import { getCardDetails } from "../../../utils/helpers";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,7 +41,7 @@ const AddCard: FC<MobileCheck> = ({isMobile}) => {
       <Button
         key="add"
         type="primary"
-        icon={<img src={Box} style={{ marginLeft: -5, marginRight: 10 }} />}
+      icon={<img src={Box} alt="img" style={{ marginLeft: -5, marginRight: 10 }} />}
         style={{
           backgroundColor: isMobile?"#0C365A": "#325BAF",
           borderColor: isMobile ? "#0C365A": "#325BAF",

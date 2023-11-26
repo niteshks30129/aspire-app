@@ -44,7 +44,7 @@ const getCardDetails = (holderName: string) => {
 
 const deleteCurrentCard = (cards: any, card: any) => {
     let updatedCard = [...cards]
-    updatedCard = updatedCard.filter((item) => item.cardNumber != card.cardNumber)
+    updatedCard = updatedCard.filter((item) => item.cardNumber !== card.cardNumber)
     return updatedCard
 }
 

@@ -27,7 +27,7 @@ const MyCard: React.FC = () => {
       dispatch(updateCard(data));
       
     });
-  }, [fetchCard]);
+  }, [dispatch]);
 
   const [cardNo, setCardNo] = useState(0);
 

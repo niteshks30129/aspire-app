@@ -16,8 +16,6 @@ import { CardObject } from "../../../types";
 import { useMediaQuery } from "react-responsive";
 type MenuItem = Required<MenuProps>["items"][number];
 
-const width = 462;
-const CARD_WIDTH = width - 48;
 
 function getItem(
   label: React.ReactNode,

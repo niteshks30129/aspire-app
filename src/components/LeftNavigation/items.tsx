@@ -1,5 +1,3 @@
-import { UserOutlined } from '@ant-design/icons';
-
 import { Link } from 'react-router-dom';
 import React from 'react';
 import type { MenuProps } from 'antd';
