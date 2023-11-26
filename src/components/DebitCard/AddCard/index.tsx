@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { Modal, Input, Button, Form } from "antd";
+import React, { FC, useState } from "react";
+import { Modal, Input, Button, Form, Image, Col } from "antd";
 import Box from "../../../assets/images/box.svg";
 import { getCardDetails } from "../../../utils/helpers";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCards, updateCard } from "../../../redux/card";
+import { MobileCheck } from "../../../types";
 
-const App: React.FC = () => {
+
+const AddCard: FC<MobileCheck> = ({isMobile}) => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const cards = useSelector(selectCards);
@@ -41,9 +43,10 @@ const App: React.FC = () => {
         type="primary"
         icon={<img src={Box} style={{ marginLeft: -5, marginRight: 10 }} />}
         style={{
-          backgroundColor: "#325BAF",
-          borderColor: "#325BAF",
+          backgroundColor: isMobile?"#0C365A": "#325BAF",
+          borderColor: isMobile ? "#0C365A": "#325BAF",
           width: 109,
+          color: isMobile? "#23CEFD": '#fff',
           height: 35,
           borderRadius: 4,
           textAlign: "center",
@@ -88,4 +91,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default AddCard;

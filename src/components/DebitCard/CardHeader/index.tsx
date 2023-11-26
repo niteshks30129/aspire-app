@@ -1,7 +1,9 @@
 
 import { Button, Space } from "antd";
+import { MobileCheck } from "../../../types";
+import { FC } from "react";
 
-const CardHeader = () => {
+const CardHeader: FC<MobileCheck> = ({isMobile}) => {
   return (
     <Space
       direction="vertical"
@@ -17,7 +19,7 @@ const CardHeader = () => {
           fontFamily: "Open Sans, sans-serif",
           fontWeight: "normal",
           marginLeft: -10,
-          color: "#222222",
+          color: isMobile ? "#fff" : "#222222",
         }}
       >
         Available balance
@@ -50,7 +52,7 @@ const CardHeader = () => {
         <Space
           style={{
             fontSize: 26,
-            color: "#222222",
+            color: isMobile ? "#fff" : "#222222",
             fontFamily: 'Open Sans, sans-serif',
             fontWeight: "bolder",
           }}

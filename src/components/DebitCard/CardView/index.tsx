@@ -45,15 +45,15 @@ const CardNumberDisplay = (
     );
   } else {
     return (
-      <Row>
+      <div style={{ marginRight: 25, display: "flex", flexDirection: "row" }}>
         {[...Array(3)].map((_, index) => (
-          <Col
+          <Row
             style={{ marginRight: 25, display: "flex", flexDirection: "row" }}
           >
             {[...Array(4)].map((_, index) => (
-              <Col key={index} style={styles.bullets}></Col>
+              <Row key={index} style={styles.bullets}></Row>
             ))}
-          </Col>
+          </Row>
         ))}
         <Text
           style={{
@@ -67,34 +67,28 @@ const CardNumberDisplay = (
         >
           {cardNumber.substring(12, 16)}
         </Text>
-      </Row>
+      </div>
     );
   }
 };
 
 const CardView = (card: CardObject) => {
-
   return (
-    <Col style={{ width: CARD_WIDTH, height: CARD_HEIGHT + 32, marginTop: 20, }}>
+    <Col style={{ width: CARD_WIDTH, height: CARD_HEIGHT + 32, marginTop: 20, opacity: card.status === 'freeze' ? .5 : 1 }}>
       <Row
         style={{
-          backgroundColor: "white",
           justifyContent: "flex-end",
-          alignItems: 'flex-end',
           display: 'flex',
+          marginRight: -80,
+          marginBottom: -10,
           zIndex: 2132435443,
         }}
       >
-        <Button type="text">
-        <Row
-          style={{ color: "#01D167", fontSize: 10, fontWeight: "600", marginRight: -15}}
-        >
+        <Button type="text" style={{padding: 10, display: 'flex', flexDirection: 'row', width: 200, marginBottom: 10}}>
             <Image src={EyeOpen} preview={false} />
-            <Col style={{marginLeft: 5}}>
+            <Col style={{marginLeft: 5, color: "#01D167", fontSize: 10, fontWeight: "600",}}>
                {"Show card number"}
             </Col>
-          
-        </Row>
         </Button>
        
       </Row>

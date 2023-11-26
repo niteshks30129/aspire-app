@@ -6,6 +6,8 @@ import Next from "../../../assets/images/next.svg";
 
 import "./index.css";
 import { Col, Image, Row, Typography, List } from "antd";
+import { MobileCheck } from "../../../types";
+import { FC } from "react";
 const { Text } = Typography;
 
 const transactions: any = [
@@ -35,14 +37,13 @@ const transactions: any = [
   },
 ];
 
-const TransactionHeader = () => {
+const TransactionHeader: FC<MobileCheck> = ({isMobile}) => {
   return (
     <Row
       style={{
-        width: 366,
+        width: isMobile ? '90vw' : 366,
         marginTop: -40,
         marginLeft: -45,
-        display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
       }}
@@ -50,9 +51,10 @@ const TransactionHeader = () => {
       <Row
         style={{
           backgroundColor: "#F5F9FF",
-          width: 366,
+          width: isMobile ? '90vw' : 366,
           height: 84,
           paddingTop: 30,
+          display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           borderRadius: 8,
@@ -79,12 +81,12 @@ const TransactionHeader = () => {
   );
 };
 
-const TransactionFooter = () => {
+const TransactionFooter: FC<MobileCheck> = ({isMobile}) => {
   return (
     <Row
       style={{
         backgroundColor: "#EDFFF5",
-        width: 365,
+        width: isMobile ? '90vw' : 365,
         marginLeft: 1,
         height: 60,
         alignItems: "center",
@@ -169,7 +171,7 @@ const ListTitle = (transaction: Transaction) => {
 
 const TransactionDescription = (transaction: Transaction) => {
   return (
-    <Row style={{ marginTop: 20 }}>
+    <Row style={{ marginTop: 20, flexDirection: 'row', display: 'flex' }}>
       <Row
         style={{
           width: 24,
@@ -217,8 +219,7 @@ const TransactionAmount = (transaction: Transaction) => {
         </Row>
     )
 }
-
-const CardTransaction = () => {
+const CardTransaction: FC<MobileCheck> = ({isMobile}) => {
   const renderItem = (transaction: any) => {
     return (
       <List.Item style={{ paddingTop: 15 }}>
@@ -236,9 +237,9 @@ const CardTransaction = () => {
       <List
         dataSource={transactions}
         bordered
-        header={<TransactionHeader />}
+        header={<TransactionHeader isMobile={isMobile} />}
         style={{
-          width: 366,
+          width:isMobile ? '90vw' : 366,
           backgroundColor: "#fff",
           marginTop: 54,
           padding: 20,
@@ -249,7 +250,7 @@ const CardTransaction = () => {
         }}
         renderItem={renderItem}
       />
-      <TransactionFooter />
+      <TransactionFooter isMobile={isMobile} />
     </Col>
   );
 };

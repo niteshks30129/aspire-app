@@ -22,3 +22,6 @@ export interface CardObject {
     status: string,
     isActive: boolean
 }
+export interface MobileCheck {
+    isMobile: boolean
+}

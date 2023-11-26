@@ -15,17 +15,18 @@ const LeftNavigation: React.FC = () => {
     <Col
       style={{
         height: "100%",
-        width: 330,
-        position: "fixed",
+        width: isMobile ? "100%" :330,
+        position: isMobile ? 'relative' :"fixed",
         paddingLeft: 48,
         paddingRight: 48,
         flexDirection: "column",
         left: 0,
         top: 0,
         bottom: 0,
-        zIndex: 200000,
         backgroundColor: "#0C365A",
+        
       }}
+      className="mobile-left-nav"
     >
       <Col className="inmobi-logo">
         <Space size="large" align="start">

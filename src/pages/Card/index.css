@@ -25,3 +25,19 @@
     color: #222222;
     opacity: 0.3;
 }
+
+@media screen and (max-width: 567px)  {
+
+.ant-page-header {
+  padding: 0 !important
+}
+.ant-card-body {
+  padding: 0;
+}
+.ant-row {
+  display:block;
+}
+.ant-image-img {
+  width: auto;
+}
+}

@@ -19,7 +19,6 @@ const CarouselCard: FC<CarouselCardProps> = ({ cards, slideChange }) => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
-
   return (
     <div style={{ width: 434}}>
       <Slider {...settings} afterChange = {slideChange}>

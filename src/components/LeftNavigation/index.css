@@ -6,6 +6,7 @@
         width: 100%;
         background-color: #FFFFFF;
         color: #DDDDDD;
+        z-index: 10;
       }
 
       .ant-menu-submenu-selected::after {
@@ -33,6 +34,10 @@
         margin-top: -12px;
         margin-left: 0px !important;
       }
+      /* .mobile-left-nav{
+        width: 100%;
+        position: relative;
+      } */
   }
 
   .inmobi-logo {

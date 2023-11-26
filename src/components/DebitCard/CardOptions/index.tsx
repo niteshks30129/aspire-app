@@ -13,6 +13,7 @@ import type { MenuProps } from "antd";
 import { selectCards, updateCard } from "../../../redux/card";
 import { deleteCurrentCard, freezeCardHandler } from "../../../utils/helpers";
 import { CardObject } from "../../../types";
+import { useMediaQuery } from "react-responsive";
 type MenuItem = Required<MenuProps>["items"][number];
 
 const width = 462;
@@ -48,13 +49,14 @@ function getItem(
 
 interface CardOptionsProps {
     currentCard: CardObject;
+    updateCardNo: any
 }
 
-const CardOptions: FC<CardOptionsProps>  = ({currentCard}) => {
+const CardOptions: FC<CardOptionsProps>  = ({currentCard, updateCardNo}) => {
     const dispatch = useDispatch();
     const cards = useSelector(selectCards);
     const [modalIsOpen, setModalIsOpen] = useState(false);
-  
+   console.log("currentCard", currentCard)
     const openModal = () => {
       setModalIsOpen(true);
     };
@@ -84,6 +86,7 @@ const CardOptions: FC<CardOptionsProps>  = ({currentCard}) => {
 
   const deleteCard = () => {
     const updatedCards = deleteCurrentCard(cards, currentCard)
+    updateCardNo(cards.length!== 1 && cards[cards.length-1].cardNumber === currentCard.cardNumber)
     dispatch(updateCard(updatedCards))
     setModalIsOpen(false);
   }
@@ -116,6 +119,8 @@ const CardOptions: FC<CardOptionsProps>  = ({currentCard}) => {
     <Image src={DeactivateCard} preview={false} />,
     openModal
   );
+  const isMobile = useMediaQuery({ maxWidth: 567 });
+
 
   const items = [
     FreezeItem,
@@ -125,18 +130,17 @@ const CardOptions: FC<CardOptionsProps>  = ({currentCard}) => {
     CancelCardItem,
   ];
   return (
-    <Col style={{ width: CARD_WIDTH, marginTop: 20 }}>
+    <Col style={{ width: '100%', marginTop: 20 }}>
       <Col
-        style={{
-          width: CARD_WIDTH,
-        }}
       >
         <Menu
           defaultSelectedKeys={["1"]}
           style={{
             backgroundColor: "#EDF3FF",
             alignItems: "center",
-            width: 414,
+            justifyContent: 'space-between',
+            minWidth: 414,
+            maxWidth: isMobile? '100vw': 414
           }}
           mode={"horizontal"}
           className="card-option"
