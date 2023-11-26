@@ -1,0 +1,40 @@
+/** ant main css */
+@import '~antd/dist/antd.css';
+@import './ant-override.css';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* BottomNavBar.css */
+.bottom-nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    
+  }
+  
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-page-header .ant-page-header-content {
+    border-bottom: none;
+  }
+  

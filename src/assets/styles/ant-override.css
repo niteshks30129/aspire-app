@@ -1,0 +1,48 @@
+.app-header {
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 230px);
+    z-index: 2;
+    line-height: 0;
+    padding: 0 24px;
+    .ant-dropdown-trigger {
+        display: block;
+    }
+}
+
+
+
+.ant-page-header-heading {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(235, 237, 240);
+}
+
+.ant-page-header-heading-extra {
+    display: flex;
+}
+
+.user-roles-profile {
+    .ant-card-body {
+        padding-bottom: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.ant-page-header-footer {
+    overflow: auto;
+}
+
+a[href] {
+    color: #1890ff;
+}
+
+.ant-progress-outer {
+    width: 100%;
+}

@@ -1,0 +1,73 @@
+  @media screen and (max-width: 567px)  {
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        color: #DDDDDD;
+      }
+
+      .ant-menu-submenu-selected::after {
+        border-bottom: 0px solid #1890ff;
+    }
+
+      .ant-menu-title-content a  {
+        color: #DDDDDD !important;
+        font-size: 12px !important;
+      }
+
+      .ant-menu-item {
+        color: #DDDDDD;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .ant-menu-item::hover {
+        background-color: #DDDDDD;
+        display: flex !important;
+      }
+      .ant-menu-item span {
+        color: #DDDDDD;
+        margin-top: -12px;
+        margin-left: 0px !important;
+      }
+  }
+
+  .inmobi-logo {
+    height: 84px;
+    display: flex;
+    align-items: center;
+}
+
+.ant-menu-item {
+    font-size: 16px;
+  }
+  .ant-menu-inline .ant-menu-item:not(:last-child) {
+    margin-bottom: 32px;
+    margin-left: -24px;
+  }
+
+  .ant-menu-inline .ant-menu-item:last-child {
+    margin-left: -24px;
+  }
+
+  .ant-menu-item-selected, .ant-menu-item-selected:hover {
+    background-color: transparent !important;
+  }
+  .ant-menu-item-selected svg path {
+    fill: #01D167; /* Change this to the desired color */
+  }
+  .ant-menu-item-selected .anticon, .ant-menu-item-selected:hover .anticon {
+    color: #01D167 !important;
+  }
+  .ant-menu-item span {
+    margin-left: 15px;
+  }
+  .ant-menu-item-selected span a, .ant-menu-item-selected:hover span a {
+    color: #01D167 !important;
+    font-weight: bolder;
+    font-family: Open Sans, sans-serif;
+  }
+  

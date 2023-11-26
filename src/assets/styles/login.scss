@@ -1,0 +1,44 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #d9edff;
+
+    .ant-card {
+        border: none;
+    }
+
+    .ant-card-body {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ant-row {
+        width: 100%;
+        height: 100%;
+    }
+
+    .login-text-container {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 10%;
+        border: none;
+    }
+
+    .login-image-container {
+        background: url('../images/login.png');
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,27 @@
+
+
+.ant-page-header-heading {
+    border-bottom: none !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+    opacity: 1 !important;
+    font-weight: 600;
+    border-bottom: 2px solid #325BAF; /* Set the desired color and style for the bottom border */
+  }
+
+  .ant-tabs-ink-bar {
+    background: #23CEFD !important;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #222 !important;
+    opacity: 1 !important;
+  }
+
+.ant-tabs-tab {
+    font-family: Avenir Next;
+    font-size: 14px;
+    color: #222222;
+    opacity: 0.3;
+}

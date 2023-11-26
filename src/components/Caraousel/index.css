@@ -1,0 +1,24 @@
+.slick-dots li.slick-active button::before {
+    opacity: 1 !important;
+    color: #01D167 !important;
+    width: 16px;
+}
+
+.slick-dots li button:before {
+    opacity: .3;
+    font-size: 8px;
+    color: #01D167 !important;
+}
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+  }
+  
+  .slick-dots li {
+    margin: 0 4px; /* Adjust the margin between dots as needed */
+  }
+.slick-dots li button {
+    width: 20px; /* Adjust the width of the dots */
+    height: 5px; /* Adjust the height of the dots */
+    border-radius: 3px; /* Optional: Adjust border-radius for rounded dots */
+  }
