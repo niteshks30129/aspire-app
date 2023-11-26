@@ -38,7 +38,7 @@ const LeftNavigation: React.FC = () => {
       </Col>
       {leftNavConfig ? (
         <Menu
-          defaultSelectedKeys={["2"]}
+          defaultSelectedKeys={["1"]}
           style={{
             backgroundColor: isMobile ? "#fff" : "#0C365A",
             justifyContent: "space-around",
